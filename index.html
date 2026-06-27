@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 A Special Invitation For You</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>💕 A Special Invitation For You 💕</h1>
+            <p class="subtitle">Let's create an unforgettable memory together</p>
+        </div>
+
+        <!-- Main Form -->
+        <form class="invitation-form" id="invitationForm">
+            
+            <!-- Your Name -->
+            <div class="form-group">
+                <label for="yourName" class="form-label">What's your name, beautiful? 🌹</label>
+                <input 
+                    type="text" 
+                    id="yourName" 
+                    name="yourName" 
+                    placeholder="Enter your name" 
+                    required
+                    class="input-field"
+                >
+            </div>
+
+            <!-- Date Selection -->
+            <div class="form-group">
+                <label for="dateChosen" class="form-label">Pick a date you'd love to spend with me 📅</label>
+                <input 
+                    type="date" 
+                    id="dateChosen" 
+                    name="dateChosen" 
+                    required
+                    class="input-field"
+                    min=""
+                >
+            </div>
+
+            <!-- Activity Selection -->
+            <div class="form-group">
+                <label class="form-label">What type of date appeals to you? 🎯</label>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="activity" value="🏛️ Museum" required>
+                        <span class="option-box">🏛️ Museum</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="activity" value="🏘️ Binondo">
+                        <span class="option-box">🏘️ Binondo</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="activity" value="🎬 Cinema">
+                        <span class="option-box">🎬 Cinema</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="activity" value="🏰 Intramuros">
+                        <span class="option-box">🏰 Intramuros</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Outfit Selection -->
+            <div class="form-group">
+                <label class="form-label">What outfit would you wear? 👗</label>
+                <div class="options-grid">
+                    <label class="option-label">
+                        <input type="radio" name="outfit" value="👔 Formal" required>
+                        <span class="option-box">👔 Formal</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="outfit" value="👕 Casual">
+                        <span class="option-box">👕 Casual</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="outfit" value="🧥 Street Wear">
+                        <span class="option-box">🧥 Street Wear</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Color Selection -->
+            <div class="form-group">
+                <label class="form-label">What's your favorite color? 🎨</label>
+                <div class="color-grid">
+                    <label class="color-option" style="--color: #FF69B4;">
+                        <input type="radio" name="color" value="💗 Pink" required>
+                        <span class="color-box"></span>
+                    </label>
+                    <label class="color-option" style="--color: #FF0000;">
+                        <input type="radio" name="color" value="❤️ Red">
+                        <span class="color-box"></span>
+                    </label>
+                    <label class="color-option" style="--color: #FFD700;">
+                        <input type="radio" name="color" value="💛 Gold">
+                        <span class="color-box"></span>
+                    </label>
+                    <label class="color-option" style="--color: #9370DB;">
+                        <input type="radio" name="color" value="💜 Purple">
+                        <span class="color-box"></span>
+                    </label>
+                    <label class="color-option" style="--color: #00CED1;">
+                        <input type="radio" name="color" value="💙 Turquoise">
+                        <span class="color-box"></span>
+                    </label>
+                    <label class="color-option" style="--color: #FF6347;">
+                        <input type="radio" name="color" value="🧡 Coral">
+                        <span class="color-box"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Personal Message -->
+            <div class="form-group">
+                <label for="message" class="form-label">Add a special message (optional) 💌</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Share your thoughts..." 
+                    rows="4"
+                    class="input-field textarea"
+                ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-text">Send Me Your Answer 💌</span>
+            </button>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <h3>✨ Thank You! ✨</h3>
+                <p>Your response has been sent! I can't wait to see you soon! 💕</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage">
+                <p id="errorText"></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
